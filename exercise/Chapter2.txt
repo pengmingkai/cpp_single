@@ -1,0 +1,357 @@
+2.1
+a) main
+b) left brace; right brace
+c) ;(semicolon)
+d) newline
+e) if
+
+2.2
+a) false. The comments won't be executed.
+b) true
+c) true
+d) true
+e) false. C++ is case sensitive.
+f) true
+g) true
+h) false. + and - have lower level of precedence.
+i) false. \n can help.
+
+2.3
+a) int c, thisIsAVariable, q76354;
+b) std::cout << "Please enter an integer: ";
+c) std::cin >> age;
+d) if (number != 7) cout << "The variable number is not equal to 7";
+e) std::cout << "This is a C++ program";
+f) std::cout << "This is a C++" << endl << "program";
+g) std::cout << ""This\nis\na\nC++\nprogram";
+h) std::cout << ""This\tis\ta\tC++\tprogram";
+
+2.4
+a) //calculate the product of three integers
+b) int x = 0; int y = 0; int z = 0; int result = 0;
+c) cout << "Please enter three integers";
+d) cin >> x >> y >> z;
+e) result = x * y * z;
+f) cout << "The product is " << result << endl;
+g) return 0;
+
+2.5
+#include <iostream>
+using namespace std;
+int main() {
+	int x, y, z;
+	cout << "Please enter three integers: ";
+	cin >> x >> y >> z;
+	cout << "The answer is " << x + y + z << endl;
+	return 0;
+}
+
+2.6
+a) (c<7 -> (c<7)
+b) =! -> !=
+
+2.7
+a) to include some necessary i/o function which is previously ready by masters
+b) means cout stream?
+
+2.8
+a) comments
+b) cout
+c) if
+d) assignments
+e) cin
+
+2.9
+a) cout << "Welcome to the world of C++";
+b) a = b + c;
+c) //calculate the simple interest
+d) cout << a << b << c;
+
+2.10
+a) true
+b) false. _fineSum2, _2findSum, 2_findSum, var1.xyz are not invalid.
+c) false. Should be corrected as cout << " Hello World";
+d) false. parenthsis:圆括号 It should be brace:花括号.
+e) false. a_1 is valid.
+
+2.11
+a) -(subtraction)
+b) *(multiplication)
+c) assignment
+
+2.12
+a) "20 10"
+b) "30"
+c) "x is equal to10"
+d) "y = 20"
+e) "nothing."
+f) "nothing."
+g) "10\20"
+h) "nothing."
+i) 	"10
+	20"
+
+2.13
+b)d)
+
+2.14
+a)d)e)
+
+2.15
+a) x=7	(1)3*4=12 (2)12/2=6 (3)3+6=9 (4)9-2=7
+b) x=	(1)4%2=0 (2)2*4=8 (3)2/2=1 (4)0+8=8 (5)8-1=7
+c) x=27	(1)9*3=27 (2)27/3=9 (3)2*4=8 (4)8*2=18 (5)18+9=27
+
+2.16
+#include <iostream>
+using namespace std;
+int main() {
+	int x, y, z;
+	cout << "Please enter three integers: ";
+	cin >> x >> y >> z;
+	cout << "\nThe addition is " << x + y + z << endl;
+	cout << "The product is " << x * y * z << endl;
+	return 0;
+}
+
+2.17
+a) cout << "1\t2\t3\t4\t5\t6\n";
+b) cout << "1\t" << "2\t" << "3\t" << "4\t" << "5\t" << "6\n";
+c)
+cout << "1\t";
+cout << "2\t";
+cout << "3\t";
+cout << "4\t";
+cout << "5\t";
+cout << "6\n";
+
+2.18
+#include <iostream>
+using namespace std;
+int main() {
+	int x, y;
+	cout << "Please enter two integers: ";
+	cin >> x >> y;
+	if (x == y)
+		cout << "These numbers are equal.";
+	else
+		cout << ((x < y) ? x : y) << "is smaller.";
+	return 0;
+}
+
+2.19
+#include <iostream>
+using namespace std;
+int main() {
+	int x, y, z, temp;
+	cout << "Please enter three integers: ";
+	cin >> x >> y >> z;
+	cout << "Sum is " << x + y + z << endl;
+	cout << "Average is " << (x + y + z) / 3 << endl;
+	cout << "Product is " << x * y * z << endl;
+	if (x >= y && x >= z) {
+		temp = x;
+		if (y <= z)
+			cout << "Smallest integer is " << y << endl;
+		else
+			cout << "Smallest integer is " << z << endl;
+	}
+	else if (y >= x && y >= z) {
+		temp = y;
+		if (x <= z)
+			cout << "Smallest integer is " << x << endl;
+		else
+			cout << "Smallest integer is " << z << endl;
+	}
+	else {
+		temp = z;
+		if (y <= x)
+			cout << "Smallest integer is " << y << endl;
+		else
+			cout << "Smallest integer is " << x << endl;
+	}
+	cout << "Largest integer is " << temp << endl;
+	return 0;
+}
+
+2.20
+#include <iostream>
+#define pai 3.14159
+using namespace std;
+int main() {
+	int r, h;
+	cout << "Please enter the radius: ";
+	cin >> r;
+	cout << "Please enter the height: ";
+	cin>> h;
+	cout <<"The volume is "<<r * r * pai * h << endl;
+	cout << "The surface area is " << 2 * pai * r * r + 2 * pai * r * h << endl;
+	return 0;
+}
+
+2.21
+#include <iostream>
+using namespace std;
+int main() {
+	cout << "*********            ***              *               *" << endl;
+	cout << "*       *          *     *           ***             * *" << endl;
+	cout << "*       *         *       *         *****           *   *" << endl;
+	cout << "*       *         *       *           *            *     *" << endl;
+	cout << "*       *         *       *           *           *       *" << endl;
+	cout << "*       *         *       *           *            *     *" << endl;
+	cout << "*       *         *       *           *             *   *" << endl;
+	cout << "*       *          *     *            *              * *" << endl;
+	cout << "*********            ***              *               *" << endl;
+	return 0;
+}
+
+2.22
+*****
+****
+***
+**
+*
+
+2.23
+#include <iostream>
+using namespace std;
+int main() {
+	int x, y, z;
+	cout << "Please enter three integers: ";
+	cin >> x >> y >> z;
+	if (x >= y && x >= z) {
+		cout << endl << "The largest integer is " << x << '.' << endl;
+		if (y <= z)
+			cout << "The smallest integer is " << y << '.' << endl;
+		else
+			cout << "The smallest integer is " << z << '.' << endl;
+	}
+	else if (y >= x && y >= z) {
+		cout << endl << "The largest integer is " << y << '.' << endl;
+		if (x <= z)
+			cout << "The smallest integer is " << x << '.' << endl;
+		else
+			cout << "The smallest integer is " << z << '.' << endl;
+	}
+	else {
+		cout << endl << "The largest integer is " << z << '.' << endl;
+		if (y <= x)
+			cout << "The smallest integer is " << y << '.' << endl;
+		else
+			cout << "The smallest integer is " << x << '.' << endl;
+	}
+	return 0;
+}
+
+2.24
+#include <iostream>
+using namespace std;
+int main() {
+	int x;
+	cout << "Please enter an integer: ";
+	cin >> x;
+	if (x % 3 == 0)
+		cout << "It is divisible by 3." << endl;
+	else
+		cout << "It is not divisible by 3." << endl;
+	return 0;
+}
+
+2.25
+#include <iostream>
+using namespace std;
+int main() {
+	int x, y;
+	cout << "Please enter two integers: ";
+	cin >> x >> y;
+	if (y % x == 0)
+		cout << "The first is a factor of the second." << endl;
+	else
+		cout << "The first is not a factor of the second." << endl;
+	return 0;
+}
+
+2.26
+//8 statements version
+using namespace std;
+cout << "* * * * * * * *" << endl;
+cout << " * * * * * * * " << endl;
+cout << "* * * * * * * *" << endl;
+cout << " * * * * * * * " << endl;
+cout << "* * * * * * * *" << endl;
+cout << " * * * * * * * " << endl;
+cout << "* * * * * * * *" << endl;
+cout << " * * * * * * * " << endl;
+
+//"as few as possible" version
+using namespace std;
+cout << "* * * * * * * *" << endl << " * * * * * * * " << endl << "* * * * * * * *" << endl << " * * * * * * * " << endl << "* * * * * * * *" << endl << " * * * * * * * " << endl << "* * * * * * * *" << endl << " * * * * * * * " << endl;
+
+2.27
+#include <iostream>
+using namespace std;
+int main() {
+	char c;
+	cout << "Please enter a character: ";
+	cin >> c;
+	cout << "The integer equivalent of this character is " << (int)c << endl;
+	return 0;
+}
+
+2.28
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+	string s;
+	cout << "Please enter a five-digit integer: ";
+	cin >> s;
+	for (int i = 0; i < 5; i++)
+		cout << s[i] << "   ";
+	cout << endl;
+	return 0;
+}
+
+2.29
+#include <iostream>
+using namespace std;
+int main() {
+	cout << "integer\tsquare\tcube\n";
+	for (int i = 0; i <= 10; i++)
+		cout << i << '\t' << i * i << '\t' << i * i * i << endl;
+	return 0;
+}
+
+2.30
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+	double w, h;
+	cout << "Please enter your weight(kg): ";
+	cin >> w;
+	cout << "Please enter your height(m): ";
+	cin >> h;
+	cout << "\nYour bmi is " << round(w / (h * h) * 10) / 10 << ".\n" ;
+	cout << "\nBMI VALUES\nUnderweight:\tless than 18.5\nNormal:\t\tbetween 18.5 and 24.5\nOverweight:\tbetween 25 and 29.9\nObese:\t\t30 or greater\n";
+	return 0;
+}
+
+2.31
+#include <iostream>
+using namespace std;
+int main() {
+	int a, b, c, d, e;
+	cout << "Please enter the total miles you drive per day: ";
+	cin >> a;
+	cout << "Please enter the cost per gallon of gasoline: ";
+	cin >> b;
+	cout << "Please enter the average miles per gallon: ";
+	cin >> c;
+	cout << "Please enter the parking fees per day: ";
+	cin >> d;
+	cout << "Please enter the tolls per day: ";
+	cin >> e;
+	cout << "\nYour daily driving cost is " << a / c * b + d + e << " dollars.\n";
+	return 0;
+}

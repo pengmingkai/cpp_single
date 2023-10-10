@@ -1,0 +1,223 @@
+4.23
+
+i. x == 9 && y == 11
+a) *****
+b) *****
+
+ii. x == 11 && y == 9
+a)
+#####
+$$$$$
+b)
+#####
+$$$$$
+
+4.24
+a)
+if ( y == 8 )
+if ( x == 5 )
+cout << "@@@@@" << endl;
+else
+cout << "#####" << endl;
+cout << "$$$$$" << endl;
+cout << "&&&&&" << endl;
+b)
+if ( y == 8 )
+if ( x == 5 )
+cout << "@@@@@" << endl;
+else {
+cout << "#####" << endl;
+cout << "$$$$$" << endl;
+cout << "&&&&&" << endl;
+}
+c)
+if ( y == 8 )
+if ( x == 5 )
+cout << "@@@@@" << endl;
+else {
+cout << "#####" << endl;
+cout << "$$$$$" << endl;
+}
+cout << "&&&&&" << endl;
+d)
+if ( y == 8 ) {
+if ( x == 5 )
+cout << "@@@@@" << endl;
+}
+else {
+cout << "#####" << endl;
+cout << "$$$$$" << endl;
+cout << "&&&&&" << endl;
+}
+
+4.25
+#include<iostream>
+using namespace std;
+int n;
+int main() {
+	cout << "Please enter the size:";
+	cin >> n;
+	for (int i = 0; i < n; i++)
+		cout << '*';
+	cout << '\n';
+	for (int i=2; i < n; i++) {
+		cout << '*';
+		for (int j = 2; j < n; j++)
+			cout << ' ';
+		cout << "*\n";
+	}
+	for(int i = 0; i < n; i++)
+		cout << '*';
+	cout << '\n';
+	return 0;
+}
+
+4.26
+#include<iostream>
+using namespace std;
+string n;
+int main() {
+	cout << "Please enter the integer:";
+	cin >> n;
+	for (int i = 0; i < size(n); i++)
+		if (n[i] != n[size(n) - i - 1]) {
+			cout << "It isn't a palindrome." << endl;
+			return 0;
+		}
+	cout << "It's a palindrome." << endl;
+	return 0;
+}
+
+4.27
+#include<iostream>
+#include<cmath>
+using namespace std;
+string n;
+int i, ans = 0;
+int main() {
+	cout << "Please enter the integer:";
+	cin >> n;
+	for (i = 0; n[i] != '\0'; i++);
+	for (int j = 0; j < i; j++)
+		ans += (int)(n[i - j - 1] - '0') * (int)pow(2, j);
+	cout << ans;
+	return 0;
+}
+
+4.28
+#include<iostream>
+using namespace std;
+int main() {
+	for (int i = 0; i < 8; i++) {
+		if (i % 2)
+			cout << ' ';
+		for (int j = 0; j < 8; j++)
+			cout << "* ";
+		cout << endl;
+	}
+	return 0;
+}
+
+4.29
+It works well at first, but prints "inf" after the number becomes too big.
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main() {
+	int i = 0;
+	while (1)
+		cout << pow(3, ++i) << endl;
+	return 0;
+}
+
+4.30
+#include<iostream>
+using namespace std;
+int main() {
+	double n;
+	cout<<"Please enter the side:";
+	cin >> n;
+	cout << "\nperimeter: " << 4 * n;
+	cout << "\narea: " << n * n << endl;
+	return 0;
+}
+
+4.31
+++ needs to follow a variable.
+correction: cout << x++ + y++ + z++;
+
+4.32
+#include<iostream>
+using namespace std;
+int main() {
+	int n[3], minn = 0;
+	for (int i = 0; i < 3; i++) {
+		cin >> n[i];
+		minn += n[i];
+	}
+	for (int i = 0; i < 3; i++)
+		for (int j = i + 1; j < 3; j++)
+			minn = min(n[i] + n[j], minn);
+	if (n[0] < minn && n[1] < minn && n[2] < minn)
+		cout << "Yes\n";
+	else cout << "No\n";
+	return 0;
+}
+
+4.33
+#include<iostream>
+using namespace std;
+double base, height;
+int main() {
+	cout << "Please enter the base:";
+	cin >> base;
+	cout << "Please enter the height:";
+	cin >> height;
+	cout << base * height / 2;
+	return 0;
+}
+
+4.34
+a)
+#include<iostream>
+using namespace std;
+int main() {
+	unsigned int n, ans = 1;
+	cin >> n;
+	while (n > 0)	ans *= n--;
+	cout << ans;
+	return 0;
+}
+b)
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+using namespace std;
+int main() {
+	cout << "Please enter the number of terms in the summation:";
+	int n;
+	cin >> n;
+	double ans = 1;
+	for (int i = 1, j = 1; (int)(pow(10, n + 2) / j) != 0; i++, j *= i)
+		ans += 1 / (double)j;
+	cout << fixed << setprecision(n) << ans;
+	return 0;
+}
+c)
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+using namespace std;
+int n, x;
+double ans = 1;
+int main() {
+	cout << "Please enter the number of terms in the summation:";
+	cin >> n;
+	cout << "Please enter x:";
+	cin >> x;
+	for (unsigned long long i = 1, j = 1; (int)(pow(10, n + 2) * pow(x, i) / j) != 0; i++, j *= i)
+		ans += pow(x, i) / j;
+	cout << fixed << setprecision(n) << ans;
+	return 0;
+}
