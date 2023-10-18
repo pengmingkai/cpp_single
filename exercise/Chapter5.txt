@@ -1,0 +1,230 @@
+5.4
+a) ++x should be changed to x--
+b) "break;" should be added after "cout<<"Even integer"<<endl;"
+c) x+=2 should be changed to x-=2
+d) counter<100 should be changed to counter<=100
+
+5.5
+#include<iostream>
+using namespace std;
+int main() {
+	int n, num, ans = 0;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> num;
+		ans += num;
+	}
+	cout << ans;
+	return 0;
+}
+
+5.6
+#include<iostream>
+using namespace std;
+int main() {
+	int i, num = 0, ans = 0;
+	for (i = 0; num != 9999; i++) {
+		ans += num;
+		cin >> num;
+	}
+	cout << ans / (i - 1);
+	return 0;
+}
+
+5.7
+It prints a x-by-y square consisting of @
+
+5.8
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main() {
+	int n, num, minn;
+	cin >> n >> minn;
+	for (int i = 1; i < n; i++) {
+		cin >> num;
+		minn = min(minn, num);
+	}
+	cout << minn;
+	return 0;
+}
+
+5.9
+#include<iostream>
+using namespace std;
+int main() {
+	int n = 1;
+	for (int i = 1; i <= 15; i += 2)
+		n *= i;
+	cout << n;
+	return 0;
+}
+
+5.10
+#include<iostream>
+using namespace std;
+int main() {
+	for (int i = 1; i <= 5; i++) {
+		int n = 1;
+		for (int j = 1; j <= i; j++)
+			n *= j;
+		cout << "The factorials of " << i << " is " << n << ".\n";
+	}
+	return 0;
+}
+The problem of calculating the pactorial of 20 is the max of int is too small.
+The solution is to use long long instead of int.
+
+5.11
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+double amount; // amount on deposit at end of each year
+double principal = 1000.0; // initial amount before interest
+
+void output(double rate) {
+	// display headers
+	cout << "Year" << setw(21) << "Amount on deposit" << endl;
+	// set floating-point number format
+	cout << fixed << setprecision(2);
+	for (int year = 1; year <= 10; ++year) {
+		// calculate new amount for specified year
+		amount = principal * pow(1.0 + rate, year);
+		// display the year and the amount
+		cout << setw(4) << year << setw(21) << amount << endl;
+	}
+	cout << '\n';
+	return;
+}
+
+int main() {
+	for (double i = .05; i <= .1; i += .01)
+		output(i); // interest rate
+	return 0;
+}
+
+5.17
+a) 1
+b) 0
+c) 1
+d) 0
+e) 1
+f) 0
+g) 0
+h) 1
+i) 0
+
+5.20
+#include <iostream>
+using namespace std;
+int main() {
+	for (int x = 1; x <= 500; x++)
+		for (int y = x + 1; y <= 500; y++)
+			for (int z = y + 1; z <= 500; z++)
+				if (x * x + y * y == z * z)
+					cout << x << ' ' << y << ' ' << z << '\n';
+	return 0;
+}
+
+5.22
+a) !( x < 5 || y >= 7 )
+b) !( a == b && g != 5 )
+c) !( x <= 8 ) || !( y > 4 )
+d) !( i > 4 ) && !( j <= 6 )
+#include <iostream>
+using namespace std;
+int main() {
+	cout << "Which one would you like to check:";
+	char type = getchar();
+	int x, y, i, j, a, b, g;
+	switch (type) {
+	case 'a':
+		cout << "Enter x:";
+		cin >> x;
+		cout << "Enter y:";
+		cin >> y;
+		cout << "The result of !(x < 5) && !(y >= 7) is " << (!(x < 5) && !(y >= 7)) << ".\n"
+			<< "The result of !( x < 5 || y >= 7 ) is " << !(x < 5 || y >= 7) << ".\n";
+		break;
+	case 'b':
+		cout << "Enter a:";
+		cin >> a;
+		cout << "Enter b:";
+		cin >> b;
+		cout << "Enter g:";
+		cin >> g;
+		cout << "The result of !(a == b) || !(g != 5) is " << (!(a == b) || !(g != 5)) << ".\n"
+			<< "The result of !( a == b && g != 5 ) is " << !(a == b && g != 5) << ".\n";
+		break;
+	case 'c':
+		cout << "Enter x:";
+		cin >> x;
+		cout << "Enter y:";
+		cin >> y;
+		cout << "The result of !((x <= 8) && (y > 4)) is " << !((x <= 8) && (y > 4)) << ".\n"
+			<< "The result of !( x <= 8 ) || !( y > 4 ) is " << (!(x <= 8) || !(y > 4)) << ".\n";
+		break;
+	case 'd':
+		cout << "Enter i:";
+		cin >> i;
+		cout << "Enter j:";
+		cin >> j;
+		cout << "The result of !((i > 4) || (j <= 6)) is " << !((i > 4) || (j <= 6)) << ".\n"
+			<< "The result of !( i > 4 ) && !( j <= 6 ) is " << (!(i > 4) && !(j <= 6)) << ".\n";
+	}
+	return 0;
+}
+
+5.25
+#include <iostream>
+using namespace std;
+int main() {
+	int count;
+	for (count = 1; count <= 10 && count != 6; ++count) {
+		cout << count << " ";
+	}
+	count--;
+	cout << "\nBroke out of loop at count = " << count << endl;
+	return 0;
+}
+
+5.26
+It prints the following pattern.
+****
+****
+****
+
+****
+****
+****
+
+****
+****
+****
+
+****
+****
+****
+
+****
+****
+****
+
+****
+****
+****
+
+
+5.27
+#include <iostream>
+using namespace std;
+int main() {
+	int count;
+	for (count = 1; count <= 10; ++count) {
+		if (count != 5)
+			cout << count << " ";
+	}
+	return 0;
+}
